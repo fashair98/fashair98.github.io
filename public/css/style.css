@@ -1,11 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.fash {
+    color: blue;
+}
+
+.air {
+    color: red;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* Add your custom styles here */
 @media (min-width: 1000px) {
 
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
 
     header {
         background-color: #f9f9f9;
@@ -60,8 +78,9 @@
         color: #fff;
         padding: 10px 20px;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 10px;
         font-weight: bold;
+        width: 180px;
     }
 
     .features {
@@ -92,6 +111,8 @@
     }
 
     footer {
+        /* position: fixed;
+        bottom: 0; */
         background-color: #f9f9f9;
         padding: 20px;
         text-align: center;
@@ -143,6 +164,124 @@
         /* Adjust the height as desired */
     }
 
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-top: -25px;
+      }
+      
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        flex-wrap: nowrap;
+        width: calc(100% * 3);
+      }
+      
+      .slider img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      
+      .prev-btn,
+      .next-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .prev-btn {
+        left: 10px;
+      }
+      
+      .next-btn {
+        right: 10px;
+      }
+
+      .photo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .photo-container img {
+        align-items: center;
+        width: auto;
+        height: 550px;
+        /* margin-bottom: 10px; */
+        opacity: 0.97;
+        object-fit: contain;
+    }
+
+    .icon-overlay img {
+        position: absolute;
+        height: 235px;
+        opacity: 1;
+      }
+      
+      .icon-overlay-1 {
+        top: 100px;
+        left: 400px;
+      }
+      .icon-overlay-2 {
+        top: 160px;
+        left: 410px;
+      }
+      .icon-overlay-3 {
+        top: 320px;
+        left: 420px;
+      }
+      .icon-overlay-4 {
+        top: 412px;
+        left: 420px;
+      }
+      .icon-overlay-5 {
+        top: 60px;
+        right: 380px;
+      }
+      .icon-overlay-6 {
+        top: 100px;
+        right: 350px;
+      }
+      .icon-overlay-7 {
+        top: 300px;
+        right: 350px;
+      }
+      .icon-overlay-8 {
+        top: 390px;
+        right: 360px;
+      }
+
+
+      .social-media-icons {
+        position: fixed;
+        /* bottom: 30px; */
+        top: 70px;
+        right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-icon {
+        margin-bottom: 25px;
+    }
+    
+    .social-icon img {
+        /* width: 100px; */
+        height: 40px;
+    }
+
 }
 
 
@@ -160,11 +299,7 @@
 /* Add your custom styles here */
 @media (max-width: 999px) {
 
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+
 
     header {
         text-align: center;
@@ -207,7 +342,6 @@
     }
 
     .hero {
-        text-align: center;
         padding: 50px 0;
     }
 
@@ -215,6 +349,7 @@
         margin-top: -7px;
         font-size: 50px;
         margin-bottom: 40px;
+        text-align: center;
     }
 
     .hero p {
@@ -237,11 +372,11 @@
         border-radius: 20px;
         font-weight: bold;
         font-size: 50px;
-        height: 100px;
+        height: 90px;
         margin-top: 80px;
         margin-bottom: 30px;
-        margin-left: 90px;
-        margin-right: 90px;
+        margin-left: 130px;
+        margin-right: 130px;
     }
 
     .features {
@@ -345,6 +480,124 @@
         height: 65px;
         padding: 12px;
         /* Adjust the height as desired */
+    }
+
+
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-top: -20px;
+      }
+      
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        /* width: 100%;
+        box-sizing: border-box; */
+      }
+      
+      .slider img {
+        width: 100%;
+        height: auto;
+        margin-right: 8px;
+      }
+      
+      .prev-btn,
+      .next-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .prev-btn {
+        left: 10px;
+      }
+      
+      .next-btn {
+        right: 10px;
+      }
+
+
+
+      .photo-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .photo-container img {
+        max-width: 100%;
+        height: auto;
+        /* margin-bottom: 10px; */
+        opacity: 0.97;
+    }
+
+    .icon-overlay img {
+        position: absolute;
+        height: 380px;
+        opacity: 1;
+      }
+      
+      .icon-overlay-1 {
+        top: 15px;
+        left: 50px;
+      }
+      .icon-overlay-2 {
+        top: 110px;
+        left: 40px;
+      }
+      .icon-overlay-3 {
+        top: 280px;
+        left: 30px;
+      }
+      .icon-overlay-4 {
+        top: 420px;
+        left: 20px;
+      }
+      .icon-overlay-5 {
+        top: 10px;
+        right: -20px;
+      }
+      .icon-overlay-6 {
+        top: 60px;
+        right: 0px;
+      }
+      .icon-overlay-7 {
+        top: 230px;
+        right: 0px;
+      }
+      .icon-overlay-8 {
+        top: 380px;
+        right: 0px;
+      }
+
+
+
+
+    .social-media-icons {
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-icon {
+        margin-bottom: 25px;
+    }
+    
+    .social-icon img {
+        /* width: 100px; */
+        height: 85px;
     }
 
 }

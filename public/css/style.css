@@ -4,11 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .fash {
-    color: blue;
+  color: rgba(0, 0, 255, 0.761);
 }
 
 .air {
-    color: red;
+  color: rgb(232, 56, 56);
 }
 
 body {
@@ -17,13 +17,15 @@ body {
   padding: 0;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-}
+
 
 /* Add your custom styles here */
 @media (min-width: 1000px) {
 
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+  }
 
     header {
         background-color: #f9f9f9;
@@ -70,6 +72,10 @@ p {
         font-size: 18px;
         color: #777;
         margin-bottom: 30px;
+    }
+    
+    .hero img {
+      height: 280px;
     }
 
     .cta-button {
@@ -299,7 +305,10 @@ p {
 /* Add your custom styles here */
 @media (max-width: 999px) {
 
-
+  p {
+    font-family: 'Open Sans', sans-serif;
+    word-spacing: 4px;
+  }
 
     header {
         text-align: center;
@@ -353,10 +362,22 @@ p {
     }
 
     .hero p {
-        font-size: 18px;
+        font-size: 16px;
         color: #777;
         margin-bottom: 30px;
+        /* hyphens: auto;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        hyphenate-character: "-"; */
     }
+
+    .hero img {
+      /* height: 700px; */
+      width: 100%;
+      /* width: 260px; */
+      /* margin-bottom: 10px; */
+  }
 
     .cta-button {
         /* display: inline-block; */
@@ -436,6 +457,7 @@ p {
 
     .social-media-row h3 {
         margin: 0;
+        font-size: 39px;
     }
 
     .social-media-row a {
@@ -477,7 +499,7 @@ p {
     }
 
     .social-logo {
-        height: 65px;
+        height: 85px;
         padding: 12px;
         /* Adjust the height as desired */
     }

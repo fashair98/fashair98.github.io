@@ -1,50 +1,10 @@
-// const signupForm = document.getElementById('signup-form');
+const mobileBRs = document.getElementsByClassName('mb-br');
 
-// signupForm.addEventListener('submit', function(e) {
-//   e.preventDefault();
-
-//   const fullName = document.getElementById('fullName').value;
-//   const phone = document.getElementById('phone').value;
-//   const city = document.getElementById('city').value;
-//   const outfits = Array.from(document.getElementById('outfits').selectedOptions).map(option => option.value).join(', ');
-//   const email = document.getElementById('email').value;
-
-//   const data = {
-//     fullName: fullName,
-//     phone: phone,
-//     city: city,
-//     outfits: outfits,
-//     email: email
-//   };
-
-//   fetch('https://script.google.com/macros/s/AKfycbwEy3kvINVHrVAHi33_74uLJQz0x4HffqsBMzBofun4JE2rEXt92VPF6UueqRP9zsqn/exec', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(data)
-//   })
-//   .then(response => {
-//     if (response.ok) {
-//       console.log('Signup successful!');
-//       // Perform any further actions upon successful signup
-//     } else {
-//       console.error('Signup failed!');
-//       // Handle signup failure
-//     }
-//   })
-//   .catch(error => {
-//     console.error('An error occurred during signup:', error);
-//     // Handle error
-//   });
-
-
-// });
-
-
-
-
-
+for (let i = 0; i < mobileBRs.length; i++) {
+  if (window.innerWidth <= 999) {
+    mobileBRs[i].innerHTML = '<br>';
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const signupForm = document.getElementById("signup-form");
@@ -77,16 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
             fullName,
             phone,
             city,
-            outfits,
+            outfits: selectedOutfits,
             email
         };
 
         // Make POST request
-        fetch("https://script.google.com/macros/s/AKfycbyKWfB9mkJtlUbZVn4J0q9cWiReoHlMOA1MCheacBHzQRiRda5ZmBYj2xZ9bz0WpOsU8g/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbyKWfB9mkJtlUbZVn4J0q9cWiReoHlMOA1MCheacBHzQRiRda5ZmBYj2xZ9bz0WpOsU8g/exec", { 
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                "Origin": "https://fashair.in"
+                "Content-Type": "text/plain",
             },
             body: JSON.stringify(payload)
         })
@@ -94,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (response.ok) {
                     alert("Signup successful!");
                     signupForm.reset();
+                    window.location.href = "/"
                 } else {
                     alert("An error occurred. Please try again.");
                 }

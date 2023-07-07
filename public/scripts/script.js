@@ -3,6 +3,14 @@ let sliderTime = 2900;
 const slider = document.querySelector('.slider');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
+const mobileBRs = document.getElementsByClassName('mb-br');
+
+for (let i = 0; i < mobileBRs.length; i++) {
+  if (window.innerWidth <= 999) {
+    mobileBRs[i].innerHTML = '<br>';
+  }
+}
+
 
 const mediaWidth = window.innerWidth;
 
